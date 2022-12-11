@@ -121,7 +121,8 @@
                                     <th>Name</th>
                                     <th>Description</th>
                                     <th>Price</th>
-                                    <th>Photo</th>
+                                    <th>Photo 1</th>
+                                    <th>Photo 2</th>
                                     <th colspan="2" >Options</th>
                                 </tr>
                             </thead>
@@ -138,6 +139,7 @@
                                             echo '<td>' . $value['description'] .'</td>';
                                             echo '<td>' . $value['price'] .'</td>';
                                             echo '<td><img src="uploads/'. $value['photo1'] .'" style="height: 50px;"></td>';
+                                            echo '<td><img src="uploads/'. $value['photo2'] .'" style="height: 50px;"></td>';
                                             echo '<td>'; 
                                                 echo '<a href="edit-products.php?k=' . $value['id'] .'" class="btn btn-success">Edit</a> ';
                                                 echo '<a href="delete-products.php?k=' . $value['id'] .'" class="btn btn-danger">Remove</a>';
