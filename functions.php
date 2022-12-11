@@ -24,24 +24,26 @@
         if($rs = mysqli_query($con, $strSql)){
             if(mysqli_num_rows($rs) == 1){
                 $rec = mysqli_fetch_array($rs);
-                foreach ($rec as $key => $value){
+                foreach ($rec as $key => $value) {
                     $arrRec[$key] = $value;
                 }
             }
             elseif(mysqli_num_rows($rs) > 1){
                 while($rec = mysqli_fetch_array($rs)){
-                    foreach ($rec as $key => $value){
-                        $arrRec[$i] = $value;
+                    foreach ($rec as $key => $value) {
+                        $arrRec[$i][$key] = $value;
                     }
                     $i++;
                 }
             }
             mysqli_free_result($rs);
         }
-        else
+        else 
             die("ERROR: Could not execute your request!");
+
         return $arrRec;
     }
+
 
     function executeInsertLastQuery($con, $strSql){
         if(mysqli_query($con, $strSql))

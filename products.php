@@ -40,7 +40,7 @@
         if ($fileSize > 5000000 && $fileSizeTwo > 5000000 )
             $err[] = "File Should be 5mb Maximum";
         if(empty($name))
-            $err[] = "Last name is required!";
+            $err[] = "Name is required!";
         if(empty($description))
             $err[] = "Description is required!";
         if(empty($price))
@@ -113,7 +113,7 @@
                         </form>
                         <br><br>
 
-                    <h3> <i class="fa fa-table"></i>Products List</h1>
+                    <h3>Products List</h1>
                     <div class="table-responsive">
                         <table class="table table-striped table-sm">
                             <thead>
