@@ -51,7 +51,7 @@
                                 DELETE FROM tbl_products
                                 WHERE id = ".$_SESSION['k'];
                 if(mysqli_query($con, $strSql))
-                    header('products.php');
+                    header('location: products.php');
                 
                 else
                     echo 'ERROR: Failed to Delete Record!';

@@ -53,12 +53,13 @@
                                     description = '$description',
                                     price = '$price'
                                 WHERE id = ".$_SESSION['k'];
-                if(mysqli_query($con, $strSql))
-                    header('products.php');
-                
-                else
+
+                if(mysqli_query($con, $strSql)){
+                    header('location: products.php');
+                }
+                else{
                     echo 'ERROR: Failed to Update Record!';
-    
+                }
             }
         closeConnection($con); 
     }
