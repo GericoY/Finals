@@ -30,7 +30,7 @@
    	}
        closeConnection($con); 
 
-    if(isset($_POST['Update'])){
+    if(isset($_POST['Delete'])){
         $con = openConnection();
         $name = sanitizeInput($con, $_POST['prodName']);
         $description = sanitizeInput($con, $_POST['prodDesc']);
@@ -90,7 +90,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <button type="submit" name="Update" class="btn btn-primary  "><i class="fa fa-edit"></i> Update Record</button>
+                            <button type="submit" name="Delete" class="btn btn-primary  "><i class="fa fa-edit"></i> Delete Record</button>
                             <a href="products.php" class="btn btn-primary  ">Go back</a>
                         </div>
                     </div>
